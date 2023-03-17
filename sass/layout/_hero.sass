@@ -1,8 +1,8 @@
 .hero
     margin-top: 3em
-    display: grid
+    display: flex
     flex-wrap: wrap
-    background: url("../../img/hero-lg.jpg")
+    background: url("../img/hero-lg.jpg")
     height: 500px
     background-position: 30% 95%
     justify-content: center
@@ -11,19 +11,28 @@
 
 
 .text-hero
+    display: flex
     color: $white
+    width: 100%
     grid-row: 1
     text-shadow: 1px 2px 10px $black
-    text-align: center
-    padding-top: 3em
+    justify-content: center
+    align-items: center
 
 .btn--hero
-    text-align: center
+    text-decoration: none
+    text-shadow: 1px 1px 5px $black
+    display: flex
+    justify-content: center
+    align-items: center
     width: 10em
-    height: 4em
+    height: 3em
     grid-row: 2
     color: $white
     border: 1px solid $white
     padding: 1em
     border-radius: 10px
  
+.btn--hero:hover
+    background: $white
+    color: $black

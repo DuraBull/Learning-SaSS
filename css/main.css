@@ -197,8 +197,8 @@ td, th {
 .main-header {
   position: fixed;
   background: rgb(255, 255, 255);
-  -webkit-box-shadow: 0 5px 20px 10px rgb(0, 0, 0);
-          box-shadow: 0 5px 20px 10px rgb(0, 0, 0);
+  -webkit-box-shadow: 0 2px 30px 10px rgb(0, 0, 0);
+          box-shadow: 0 2px 30px 10px rgb(0, 0, 0);
   top: 0;
   left: 0;
   right: 0;
@@ -245,11 +245,12 @@ td, th {
 
 .hero {
   margin-top: 3em;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: url("../../img/hero-lg.jpg");
+  background: url("../img/hero-lg.jpg");
   height: 500px;
   background-position: 30% 95%;
   -webkit-box-pack: center;
@@ -260,18 +261,36 @@ td, th {
 }
 
 .text-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: rgb(255, 255, 255);
+  width: 100%;
   -ms-grid-row: 1;
   grid-row: 1;
   text-shadow: 1px 2px 10px rgb(0, 0, 0);
-  text-align: center;
-  padding-top: 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn--hero {
-  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 10em;
-  height: 4em;
+  height: 3em;
   -ms-grid-row: 2;
   grid-row: 2;
   color: rgb(255, 255, 255);
@@ -280,9 +299,25 @@ td, th {
   border-radius: 10px;
 }
 
+.btn--hero:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   padding: 1em 2em;
   text-align: center;
+  line-height: 2;
 }
 .content p {
   font-size: 1.3em;
@@ -293,10 +328,13 @@ td, th {
 }
 .intro h1 {
   text-shadow: 0px 0px 4px rgb(0, 0, 0);
-  margin-top: 0;
+  margin: 0;
   font-size: 1.8em;
+  padding: 1rem 0;
 }
 .intro p {
+  margin: 0;
+  width: 75%;
   text-align: center;
 }
 
